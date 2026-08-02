@@ -1,0 +1,25 @@
+// Online C compiler to run C program online
+#include <stdio.h>
+#include <string.h>
+
+struct employee{
+    int employee_id;
+    char emp_name[20];
+    int salary;
+    int age;
+};
+int main() {
+   
+   struct employee s1;
+   s1.employee_id=101;
+   strcpy(s1.emp_name,"Satheesh");
+   s1.salary=100000;
+   s1.age=19;
+   
+   printf("REsults");
+   printf("the employee_id is:%d \n ",s1.employee_id);
+   printf("the name is: %s \n ",s1.emp_name);
+   printf("salary is: %d \n ",s1.salary);
+   printf("age is: %d \n ",s1.age);
+    return 0;
+}
