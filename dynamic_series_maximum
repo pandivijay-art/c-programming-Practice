@@ -1,0 +1,40 @@
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+     
+    int n;
+    int *numbers;
+    int sum;
+    int count;
+    int max;
+    
+    printf("Enter the address spacing:");
+    scanf("%d",&n);
+    
+    numbers=calloc(n,sizeof(int));
+    
+    for(int i=0; i<n;i=i+1){
+        printf("enter your numbers:");
+        scanf("%d",&numbers[i]);
+    }
+    printf("\n");
+    count=0;
+    max=numbers[0];
+    for(int i=0;i<n;i=i+1){
+        printf("the numbers is:%d \n",numbers[i]);
+        count=count+numbers[i];
+        if(numbers[i] > numbers[0]){
+            max=numbers[i];
+        }
+        
+    }
+    printf("\n");
+    sum=count;
+    printf("maximum numbers is:%d \n",max);
+    printf("the sum of integers is:%d",sum);
+
+    free(numbers);
+    return 0;
+}
